@@ -1,0 +1,259 @@
+body,
+html {
+    background-color: #fffffc;
+    color: #333;
+    font: 16px "Open Sans", sans-serif;
+    font-weight: 400;
+    height: calc(100% - 8px);
+    margin: 0;
+}
+
+.animated {
+    transition: all 250ms ease-in-out;
+}
+
+/***************
+ * Text Styles *
+ **************/
+
+*[data-align='center'] {
+    text-align: center;
+}
+
+*[data-align='right'] {
+    text-align: right;
+}
+
+a {
+    color: #08C;
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 40px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0 0 16px 0;
+    padding: 0;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.signature {
+    font-family: "Pacifico", "Open Sans", cursive;
+    font-weight: 300;
+}
+
+/**********
+ * Button *
+ *********/
+
+.button {
+    background-color: #fff;
+    background-image: linear-gradient(to bottom,
+                                        rgba(255, 255, 255, 0.2),
+                                        rgba(0, 0, 0, 0.10));
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.24);
+    color: #555;
+    display: inline-block;
+    margin: 6px 0;
+    min-width: 100px;
+    padding: 12px;
+    text-align: center;
+    transition: all 100ms ease-in-out;
+}
+
+.button.suggested-action {
+    background-color: #08c;
+    background-image: linear-gradient(to bottom,
+                                        rgba(255, 255, 255, 0.2),
+                                        rgba(0, 0, 0, 0.05));
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
+}
+
+.button:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+                0 3px 6px rgba(0,0,0,0.23);
+}
+
+.button .fa {
+    margin-right: 12px;
+}
+
+@media only screen and (max-width: 640px) {
+    .button {
+        width: calc(100% - 24px);
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .button + .button {
+        margin-left: 12px;
+    }
+}
+
+/********
+ * Grid *
+ *******/
+
+.grid {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.grid > * {
+    margin: 16px;
+}
+
+@media only screen and (max-width: 640px) {
+    .grid > *:first-child {
+        padding-top: 3px;
+    }
+
+    .grid > *:last-child {
+        padding-bottom: 16px;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .grid > * {
+        padding-top: 32px;
+        padding-bottom: 64px;
+    }
+
+    .grid .half {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(50% - 48px);
+    }
+
+    .grid .half:only-child {
+        width: 50%;
+    }
+
+    .grid .third {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(33% - 32px);
+    }
+
+    .grid .two-thirds {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(66% - 48px);
+    }
+
+    .grid .two-thirds:only-child {
+        width: 66%;
+    }
+
+    .grid > *:only-child {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/*
+Make sure page is at least 100% tall
+ Page height minus footer and nav height
+ We're also missing 16px somewhere 
+*/
+
+.grid:nth-last-child(2) {
+    min-height: calc(100% - 168px - 56px + 16px);
+}
+
+/**********
+ * Images *
+ **********/
+
+img {
+    max-width: 100%;
+}
+
+/********
+ * Hero *
+ ********/
+
+.hero {
+    background-color: #0590D6;
+    background-image: linear-gradient(to right, #0586D6, #41A9C8);
+    color: #fff;
+    max-width: 100%;
+    padding-top: 32px;
+}
+
+.hero a:not(.button) {
+    color: #fff;
+}
+
+.hero a:not(.button):hover {
+    text-decoration: underline;
+}
+
+.hero a.button:not(.suggested-action) {
+    color: #08c;
+}
+
+.hero h2 {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2)
+}
+
+/*******
+ * Nav *
+ *******/
+
+nav {
+    background-color: #4a393e;
+    box-shadow: inset 0 1px 2px 2px rgba(255,255,255,0.3),
+                inset 0 -1px 2px 2px rgba(0,0,0,0.3),
+                0 1px 3px rgba(0,0,0,0.12),
+                0 1px 2px rgba(0,0,0,0.24);
+    color: #fff;
+    font-weight: 600;
+    height: 56px;
+    line-height: 56px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+nav a {
+    color: #fff;
+}
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.center {
+    font-family: "Indie Flower", cursive;
+    font-size: 24px;
+}
+
+nav ul.right {
+    float:right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 8px;
+}
